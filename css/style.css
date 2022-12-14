@@ -44,3 +44,13 @@
     background: #89fffd;
   }
 }
+
+
+/* date js */
+
+.date {
+  margin: 50px;
+  font-size: 48px;
+  color: #ef32d9;
+  border: 3px dotted orangered;
+}
