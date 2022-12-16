@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
 :root {
   --color-white: #fff;
 }
@@ -26,6 +26,13 @@
   color: var(--color-white);
 }
 
+.body-todo {
+  width: 670px;
+  height: 590px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* Animation */
 
 @keyframes color-change-2x {
@@ -44,7 +51,6 @@
     background: #89fffd;
   }
 }
-
 
 /* date js */
 
