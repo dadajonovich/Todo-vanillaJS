@@ -1,7 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
-:root {
-  --color-white: #fff;
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+/* reset styles */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+body {
+  font-family: 'Monda', sans-serif;
+}
+/*  INPUT */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type='number']:hover,
+input[type='number']:focus {
+  -moz-appearance: number-input;
+}
+
+/*  clear button */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+/* reset styles */
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -21,18 +80,54 @@
 }
 
 .title {
+  font-family: 'Diplomata SC', cursive;
   margin: 15px;
-  font-size: 72px;
-  color: var(--color-white);
+  font-size: 48px;
+  color: #fff;
 }
 
-.body-todo {
+.body_todo {
   width: 670px;
   height: 590px;
   margin: 0 auto;
-  text-align: center;
 }
 
+.input {
+  max-width: 100%;
+  min-height: 68px;
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+}
+.header__input {
+  padding: 20px 0 10px 30px;
+  width: 100%;
+  background: #25273c;
+  border: none;
+}
+.header__input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 36px;
+  font-family: 'Monda', sans-serif;
+}
+
+.header__btn {
+  min-width: 110px;
+  min-height: 100%;
+  background: rgba(90, 255, 49, 0.6);
+  border: none;
+  border-radius: 0px 30px 30px 0px;
+  display: grid;
+  place-items: center;
+}
+.header__btn:hover {
+  cursor: pointer;
+  background-color: rgba(36, 99, 20, 0.815);
+}
+.header__btn:active {
+  cursor: pointer;
+  background-color: rgba(13, 26, 10, 0.815);
+}
 /* Animation */
 
 @keyframes color-change-2x {
