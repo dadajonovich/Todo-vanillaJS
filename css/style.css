@@ -90,6 +90,7 @@ menu {
   width: 670px;
   height: 590px;
   margin: 0 auto;
+  
 }
 
 .input {
@@ -98,12 +99,21 @@ menu {
   border-radius: 30px;
   display: flex;
   overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.591);
+  transition: all 0.23s ease-in-out;
+}
+.input:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.656);
+  transform: translateY(3px);
 }
 .header__input {
-  padding: 20px 0 10px 30px;
+  padding: 10px 0 10px 30px;
   width: 100%;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 1);
   background: #25273c;
   border: none;
+  outline: none;
 }
 .header__input::placeholder {
   color: rgba(255, 255, 255, 0.7);
@@ -122,7 +132,7 @@ menu {
 }
 .header__btn:hover {
   cursor: pointer;
-  background-color: rgba(36, 99, 20, 0.815);
+  background-color: rgba(50, 251, 0, 0.815);
 }
 .header__btn:active {
   cursor: pointer;
