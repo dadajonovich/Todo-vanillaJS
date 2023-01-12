@@ -1,6 +1,6 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
 /* reset styles */
 *,
 *::after,
@@ -20,7 +20,7 @@ p {
   font-weight: inherit;
 }
 body {
-  font-family: 'Monda', sans-serif;
+  font-family: "Monda", sans-serif;
 }
 /*  INPUT */
 input::-webkit-outer-spin-button,
@@ -28,19 +28,19 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
-input[type='number']:hover,
-input[type='number']:focus {
+input[type="number"]:hover,
+input[type="number"]:focus {
   -moz-appearance: number-input;
 }
 
 /*  clear button */
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -80,13 +80,13 @@ menu {
 }
 
 .title {
-  font-family: 'Diplomata SC', cursive;
+  font-family: "Diplomata SC", cursive;
   margin: 15px;
   font-size: 48px;
   color: #fff;
 }
 
-.body_todo {
+.top-todo {
   width: 670px;
   height: 590px;
   margin: 0 auto;
@@ -105,7 +105,7 @@ menu {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.656);
   transform: translateY(3px);
 }
-.header__input {
+.input__text {
   padding: 10px 0 10px 30px;
   width: 100%;
   font-size: 36px;
@@ -114,13 +114,13 @@ menu {
   border: none;
   outline: none;
 }
-.header__input::placeholder {
+.input__text::placeholder {
   color: rgba(255, 255, 255, 0.7);
   font-size: 36px;
-  font-family: 'Monda', sans-serif;
+  font-family: "Monda", sans-serif;
 }
 
-.header__btn {
+.input__btn {
   min-width: 110px;
   min-height: 100%;
   background: rgba(90, 255, 49, 0.6);
@@ -129,11 +129,11 @@ menu {
   display: grid;
   place-items: center;
 }
-.header__btn:hover {
+.input__btn:hover {
   cursor: pointer;
   background-color: rgba(50, 251, 0, 0.815);
 }
-.header__btn:active {
+.input__btn:active {
   cursor: pointer;
   background-color: rgba(13, 26, 10, 0.815);
 }
