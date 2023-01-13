@@ -153,6 +153,12 @@ menu {
   background-color: rgba(13, 26, 10, 0.815);
 }
 
+.list__item {
+  display: flex;
+  margin-top: 52px;
+  max-width: 100%;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
