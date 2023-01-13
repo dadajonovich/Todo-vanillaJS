@@ -90,38 +90,6 @@ menu {
     background: #89fffd;
   }
 }
-.container {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
-  background-color: #311332;
-  -webkit-animation: color-change-2x 10s linear infinite alternate both;
-          animation: color-change-2x 10s linear infinite alternate both;
-}
-
-.wrapper {
-  min-width: 1200px;
-  min-height: 900px;
-  background-color: #1e1e1e;
-  border-radius: 30px;
-  box-shadow: 0 15px 40px rgba(28, 28, 28, 0.751);
-}
-
-.title {
-  font-family: "Diplomata SC", cursive;
-  margin: 15px;
-  font-size: 48px;
-  color: #fff;
-}
-
-.body-todo {
-  width: 670px;
-  height: 590px;
-  margin: 0 auto;
-}
-
 .input {
   max-width: 100%;
   min-height: 68px;
@@ -183,6 +151,38 @@ menu {
 .input__btn:active {
   cursor: pointer;
   background-color: rgba(13, 26, 10, 0.815);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  background-color: #311332;
+  -webkit-animation: color-change-2x 10s linear infinite alternate both;
+          animation: color-change-2x 10s linear infinite alternate both;
+}
+
+.wrapper {
+  min-width: 1200px;
+  min-height: 900px;
+  background-color: #1e1e1e;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(28, 28, 28, 0.751);
+}
+
+.title {
+  font-family: "Diplomata SC", cursive;
+  margin: 15px;
+  font-size: 48px;
+  color: #fff;
+}
+
+.body-todo {
+  width: 670px;
+  height: 590px;
+  margin: 0 auto;
 }
 
 /* date js */
