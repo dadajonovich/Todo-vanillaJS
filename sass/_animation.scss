@@ -1,18 +1,13 @@
 /* Animation */
 
-// @keyframes color-change-2x {
-//   0% {
-//     background: #ef32d9;
-//   }
-//   100% {
-//     background: #89fffd;
-//   }
-// }
-// @keyframes color-change-2x {
-//   0% {
-//     background: #ef32d9;
-//   }
-//   100% {
-//     background: #89fffd;
-//   }
-// }
+@keyframes color-change-2x {
+  0% {
+    color: #ecef32;
+  }
+  50% {
+    color: #89fffd;
+  }
+  100% {
+    color: #ecef32;
+  }
+}

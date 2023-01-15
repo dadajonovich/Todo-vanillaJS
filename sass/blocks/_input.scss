@@ -4,10 +4,10 @@
   border-radius: 40px;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.591);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
   transition: all 0.23s ease-in-out;
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.656);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.556);
     transform: translateY(3px);
   }
 }
@@ -34,6 +34,7 @@
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: all 0.23s ease-in-out;
   &:hover {
     background-color: rgba(67, 152, 45, 0.815);
   }

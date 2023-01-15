@@ -66,17 +66,39 @@ menu {
 }
 
 /* Animation */
+@-webkit-keyframes color-change-2x {
+  0% {
+    color: #ecef32;
+  }
+  50% {
+    color: #89fffd;
+  }
+  100% {
+    color: #ecef32;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    color: #ecef32;
+  }
+  50% {
+    color: #89fffd;
+  }
+  100% {
+    color: #ecef32;
+  }
+}
 .input {
   max-width: 100%;
   min-height: 68px;
   border-radius: 40px;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.591);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
   transition: all 0.23s ease-in-out;
 }
 .input:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.656);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.556);
   transform: translateY(3px);
 }
 
@@ -114,6 +136,7 @@ menu {
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: all 0.23s ease-in-out;
 }
 .input__btn:hover {
   background-color: rgba(67, 152, 45, 0.815);
@@ -143,6 +166,7 @@ menu {
   place-items: center;
   background: #8a2387;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
+  position: relative;
 }
 
 .wrapper {
@@ -151,22 +175,29 @@ menu {
   background: rgba(255, 255, 255, 0.18);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-  font-family: "Diplomata SC", cursive;
   margin: 15px;
-  font-size: 48px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 172px;
+  letter-spacing: 30px;
   color: #fff;
+  position: absolute;
+  -webkit-animation: color-change-2x 60s ease-in infinite;
+          animation: color-change-2x 60s ease-in infinite;
 }
 
 .body-todo {
   width: 670px;
   height: 590px;
-  margin: 0 auto;
+  padding: 30px;
 }
 
 /* date js */
