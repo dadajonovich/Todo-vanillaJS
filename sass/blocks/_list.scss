@@ -1,7 +1,13 @@
 .list {
   &__item {
-    display: flex;
     margin-top: 52px;
     max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    li {
+      color: white;
+      font-size: 20px;
+    }
   }
 }
