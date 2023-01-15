@@ -129,7 +129,9 @@ menu {
   display: grid;
   place-items: center;
 }
-.header__btn:hover {
+
+
+.header__btn:hover   {
   cursor: pointer;
   background-color: rgba(50, 251, 0, 0.815);
 }
