@@ -1,6 +1,6 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
 /* reset styles */
 *,
 *::after,
@@ -9,6 +9,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 h1,
 h2,
 h3,
@@ -19,28 +20,32 @@ p {
   font-size: inherit;
   font-weight: inherit;
 }
+
 body {
-  font-family: 'Monda', sans-serif;
+  font-family: "Monda", sans-serif;
 }
+
 /*  INPUT */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-input[type='number'] {
+
+input[type=number] {
   -moz-appearance: textfield;
 }
-input[type='number']:hover,
-input[type='number']:focus {
+
+input[type=number]:hover,
+input[type=number]:focus {
   -moz-appearance: number-input;
 }
 
 /*  clear button */
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -59,7 +64,99 @@ ul,
 menu {
   list-style: none;
 }
-/* reset styles */
+
+/* Animation */
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #ef32d9;
+  }
+  100% {
+    background: #89fffd;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #ef32d9;
+  }
+  100% {
+    background: #89fffd;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #ef32d9;
+  }
+  100% {
+    background: #89fffd;
+  }
+}
+.input {
+  max-width: 100%;
+  min-height: 68px;
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.591);
+  transition: all 0.23s ease-in-out;
+}
+
+.input:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.656);
+  transform: translateY(3px);
+}
+
+.input__text {
+  padding: 10px 0 10px 30px;
+  width: 100%;
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+  background: #25273c;
+  border: none;
+  outline: none;
+}
+
+.input__text::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 36px;
+  font-family: "Monda", sans-serif;
+}
+
+.input__text:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 36px;
+  font-family: "Monda", sans-serif;
+}
+
+.input__text::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 36px;
+  font-family: "Monda", sans-serif;
+}
+
+.input__btn {
+  min-width: 110px;
+  min-height: 100%;
+  background: rgba(90, 255, 49, 0.6);
+  border: none;
+  border-radius: 0px 30px 30px 0px;
+  display: grid;
+  place-items: center;
+}
+.header__btn:hover {
+  cursor: pointer;
+  background-color: rgba(50, 251, 0, 0.815);
+}
+
+.input__btn:active {
+  cursor: pointer;
+  background-color: rgba(13, 26, 10, 0.815);
+}
+
+.list__item {
+  display: flex;
+  margin-top: 52px;
+  max-width: 100%;
+}
 
 .container {
   width: 100vw;
@@ -68,7 +165,8 @@ menu {
   display: grid;
   place-items: center;
   background-color: #311332;
-  animation: color-change-2x 10s linear infinite alternate both;
+  -webkit-animation: color-change-2x 10s linear infinite alternate both;
+          animation: color-change-2x 10s linear infinite alternate both;
 }
 
 .wrapper {
@@ -80,86 +178,19 @@ menu {
 }
 
 .title {
-  font-family: 'Diplomata SC', cursive;
+  font-family: "Diplomata SC", cursive;
   margin: 15px;
   font-size: 48px;
   color: #fff;
 }
 
-.body_todo {
+.body-todo {
   width: 670px;
   height: 590px;
   margin: 0 auto;
 }
 
-.input {
-  max-width: 100%;
-  min-height: 68px;
-  border-radius: 30px;
-  display: flex;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.591);
-  transition: all 0.23s ease-in-out;
-}
-.input:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.656);
-  transform: translateY(3px);
-}
-.header__input {
-  padding: 10px 0 10px 30px;
-  width: 100%;
-  font-size: 36px;
-  color: rgba(255, 255, 255, 1);
-  background: #25273c;
-  border: none;
-  outline: none;
-}
-.header__input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 36px;
-  font-family: 'Monda', sans-serif;
-}
-
-.header__btn {
-  min-width: 110px;
-  min-height: 100%;
-  background: rgba(90, 255, 49, 0.6);
-  border: none;
-  border-radius: 0px 30px 30px 0px;
-  display: grid;
-  place-items: center;
-}
-
-
-.header__btn:hover   {
-  cursor: pointer;
-  background-color: rgba(50, 251, 0, 0.815);
-}
-.header__btn:active {
-  cursor: pointer;
-  background-color: rgba(13, 26, 10, 0.815);
-}
-/* Animation */
-
-@keyframes color-change-2x {
-  0% {
-    background: #ef32d9;
-  }
-  100% {
-    background: #89fffd;
-  }
-}
-@keyframes color-change-2x {
-  0% {
-    background: #ef32d9;
-  }
-  100% {
-    background: #89fffd;
-  }
-}
-
 /* date js */
-
 .date {
   margin: 50px;
   font-size: 48px;

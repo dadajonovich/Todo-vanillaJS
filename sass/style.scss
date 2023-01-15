@@ -1,0 +1,50 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+
+// import
+@import "reset";
+@import "animation";
+@import "blocks/input";
+@import "blocks/list";
+
+// blocks
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  background-color: #311332;
+  animation: color-change-2x 10s linear infinite alternate both;
+}
+
+.wrapper {
+  min-width: 1200px;
+  min-height: 900px;
+  background-color: #1e1e1e;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(28, 28, 28, 0.751);
+}
+
+.title {
+  font-family: "Diplomata SC", cursive;
+  margin: 15px;
+  font-size: 48px;
+  color: #fff;
+}
+
+.body-todo {
+  width: 670px;
+  height: 590px;
+  margin: 0 auto;
+}
+
+/* date js */
+
+.date {
+  margin: 50px;
+  font-size: 48px;
+  color: #ef32d9;
+  border: 3px dotted orangered;
+}
