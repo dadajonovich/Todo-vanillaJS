@@ -162,6 +162,9 @@ menu {
   background-color: rgba(63, 111, 53, 0.815);
 }
 
+.list {
+  border: 2px solid;
+}
 .list__item {
   margin-top: 52px;
   max-width: 100%;
