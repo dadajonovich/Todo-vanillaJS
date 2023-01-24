@@ -13,6 +13,6 @@
 
 ---
 
-<img src="https://media.giphy.com/media/1GEATImIxEXVR79Dhk/giphy.gif" alt="git" width="900">
+<img src="https://media.giphy.com/media/QiCCluutpecs8/giphy.gif" alt="git" width="900">
 
 </div>
