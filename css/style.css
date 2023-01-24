@@ -1,6 +1,7 @@
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 /* reset styles */
 *,
 *::after,
@@ -88,22 +89,17 @@ menu {
     color: #ecef32;
   }
 }
-@-webkit-keyframes glassBall {
-  from {
-    -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
-  }
+/* @keyframes glassBall {
+  from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+} */
+.title {
+  font-family: "Diplomata SC", cursive;
+  margin: 15px;
+  font-size: 48px;
+  color: #fff;
 }
-@keyframes glassBall {
-  from {
-    -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
-  }
-}
+
 .input {
   max-width: 100%;
   min-height: 68px;
@@ -163,26 +159,43 @@ menu {
 }
 
 .list {
-  border: 2px solid;
+  margin-top: 52px;
+  line-height: 59px;
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
 }
 .list__item {
-  margin-top: 52px;
   max-width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
 }
+.list__item img {
+  -webkit-user-drag: none;
+}
 .list__item li {
   color: white;
   font-size: 20px;
 }
+.list__vl {
+  border-bottom: 4px solid rgba(72, 64, 64, 0.37);
+}
+.list__footer {
+  border: 2px solid #ad02fe;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.list__footer p {
+  padding-right: 25px;
+  font-family: "Monda";
+  font-weight: 400;
+  font-size: 24px;
+  text-align: right;
+}
 
 .container {
-  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: grid;
-  place-items: center;
   background: #8a2387;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
   position: relative;
@@ -200,50 +213,6 @@ menu {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.title {
-  margin: 15px;
-  font-family: "Press Start 2P", cursive;
-  font-size: 172px;
-  letter-spacing: 30px;
-  color: #fff;
-  position: absolute;
-  -webkit-animation: color-change-2x 60s ease-in infinite;
-          animation: color-change-2x 60s ease-in infinite;
-}
-.title::after {
-  content: "";
-  width: 300px;
-  height: 300px;
-  background: #ef32d9;
-  background: #283c86;
-  background: linear-gradient(to right, #45a247, #283c86);
-  border-radius: 50%;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  position: absolute;
-  top: -150px;
-  left: 20%;
-  -webkit-animation: glassBall 20s linear infinite;
-          animation: glassBall 20s linear infinite;
-}
-.title::before {
-  content: "";
-  width: 400px;
-  height: 400px;
-  background: #03001e;
-  background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);
-  border-radius: 50%;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  position: absolute;
-  top: 0%;
-  right: 15%;
-  -webkit-animation: glassBall 20s linear infinite -5s;
-          animation: glassBall 20s linear infinite -5s;
 }
 
 .body-todo {
