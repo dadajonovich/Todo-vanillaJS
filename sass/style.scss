@@ -14,7 +14,7 @@
 
 // blocks
 .container {
-  // width: 100vw;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: grid;
@@ -22,6 +22,7 @@
   background: #8a2387;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
   position: relative;
+  overflow-x: hidden;
 }
 
 .wrapper {
