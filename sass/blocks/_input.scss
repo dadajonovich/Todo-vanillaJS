@@ -22,7 +22,7 @@
   &::placeholder {
     color: rgba(255, 255, 255, 0.7);
     font-size: 36px;
-    font-family: "Monda", sans-serif;
+    font-family: 'Monda', sans-serif;
   }
 }
 .input__btn {
@@ -41,5 +41,28 @@
   &:active {
     cursor: pointer;
     background-color: rgba(63, 111, 53, 0.815);
+  }
+}
+
+//стили для гугл формы
+#form {
+  min-width: 300px;
+  height: 30px;
+  display: flex;
+
+  &__input {
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+  }
+  &__submit {
+    width: 110px;
+    background-color: rgb(185, 213, 155);
+    border: none;
+    border-radius: 0 15px 15px 0;
   }
 }
