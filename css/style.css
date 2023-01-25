@@ -98,6 +98,17 @@ menu {
   margin: 15px;
   font-size: 48px;
   color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#little-google {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 100;
+  color: rgb(106, 38, 223);
 }
 
 .input {
@@ -158,6 +169,27 @@ menu {
   background-color: rgba(63, 111, 53, 0.815);
 }
 
+#form {
+  min-width: 300px;
+  height: 30px;
+  display: flex;
+}
+#form__input {
+  padding: 0 0 0 10px;
+  width: 100%;
+  height: 100%;
+  background-color: cyan;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  outline: none;
+}
+#form__submit {
+  width: 110px;
+  background-color: rgb(185, 213, 155);
+  border: none;
+  border-radius: 0 15px 15px 0;
+}
+
 .tasks {
   margin-top: 52px;
   line-height: 59px;
@@ -198,10 +230,11 @@ menu {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   display: grid;
+  place-items: center;
   background: #8a2387;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
   position: relative;
@@ -209,7 +242,7 @@ menu {
 }
 
 .wrapper {
-  min-width: 1200px;
+  min-width: 1000px;
   min-height: 900px;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 16px;
