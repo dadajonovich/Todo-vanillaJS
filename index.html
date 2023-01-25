@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <h2 class="title">Todo list</h2>
+      <h2 class="title">TODO</h2>
       <div class="wrapper">
         <div class="body-todo">
           <form name="addTask" class="input">
@@ -23,23 +23,44 @@
             </button>
           </form>
           <ul class="tasks">
-            <div class="list">
-              <div class="list__item">
-                <img src="img/Сircle.svg" alt="circle" />
-                <li class="list__text">Run nigga</li>
+            <li class="list">
+              <div class="list__wrapper">
+                <div class="list__item">
+                  <img src="img/Сircle.svg" alt="circle" />
+                  <p class="list__text">Run nigga</p>
+                </div>
+                <span class="list__delete-btn">&#10006;</span>
+              </div>
+
+              <div class="list__vl"></div>
+            </li>
+            <li class="list">
+              <div class="list__wrapper">
+                <div class="list__item">
+                  <img src="img/Check_done.svg" alt="circle" />
+                  <p class="list__text">Run nigga</p>
+                </div>
+                <span class="list__delete-btn">&#10006;</span>
               </div>
               <div class="list__vl"></div>
-            </div>
-            <div class="tasks__footer">
-              <p>5 Items</p>
-            </div>
+            </li>
           </ul>
+          <div class="tasks__footer">
+            <p>5 Items</p>
+          </div>
         </div>
         <!-- google form -->
         <p id="little-google">little 🦄 Google</p>
         <form action="https://www.google.com/search" method="get" id="form">
-          <input type="text" autocomplete="off" autofocus name="q" placeholder="Search" id="form__input"/>
-          <input type="submit" id="form__submit" value="Send">
+          <input
+            type="text"
+            autocomplete="off"
+            autofocus
+            name="q"
+            placeholder="Search"
+            id="form__input"
+          />
+          <input type="submit" id="form__submit" value="Send" />
         </form>
         <!-- google form -->
       </div>
