@@ -1,0 +1,29 @@
+#little-google {
+  text-align: center;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 100;
+  color: rgb(106, 38, 223);
+}
+
+#form {
+  display: flex;
+  min-width: 300px;
+  height: 30px;
+
+  &__input {
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 100%;
+    background-color: cyan;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+  }
+  &__submit {
+    width: 110px;
+    background-color: rgb(185, 213, 155);
+    border: none;
+    border-radius: 0 15px 15px 0;
+  }
+}
