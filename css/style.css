@@ -95,7 +95,7 @@ menu {
 } */
 .title {
   margin: 15px;
-  width: 80%;
+  width: 80vw;
   font-family: "Diplomata SC", cursive;
   font-size: 48px;
   color: #fff;
@@ -169,6 +169,9 @@ menu {
   -webkit-backdrop-filter: invert(100%);
           backdrop-filter: invert(100%);
 }
+.list__item:last-child .list__vl {
+  visibility: hidden;
+}
 .list__task {
   display: flex;
   padding: 25px 15px 20px 20px;
@@ -204,10 +207,15 @@ menu {
   text-align: right;
 }
 
-.list__item:last-child #vl {
+/* .list__item:last-child {
+  #vl {
+    visibility: hidden;
+  }
+} */
+/* .list__item:last-child .list__vl {
   visibility: hidden;
 }
-
+ */
 #little-google {
   text-align: center;
   font-family: monospace;
@@ -241,8 +249,7 @@ menu {
   display: grid;
   position: relative;
   margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   place-items: center;
   background: #8a2387;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);

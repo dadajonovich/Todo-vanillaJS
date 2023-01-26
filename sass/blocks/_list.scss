@@ -2,6 +2,9 @@
   margin-top: 52px;
   line-height: 20px;
   backdrop-filter: invert(100%);
+  &__item:last-child .list__vl {
+    visibility: hidden;
+  }
   &__task {
     display: flex;
     padding: 25px 15px 20px 20px;
@@ -35,8 +38,13 @@
   }
 }
 
-.list__item:last-child {
+/* .list__item:last-child {
   #vl {
     visibility: hidden;
   }
+} */
+
+/* .list__item:last-child .list__vl {
+  visibility: hidden;
 }
+ */
