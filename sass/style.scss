@@ -26,7 +26,8 @@
 }
 
 .wrapper {
-  min-width: 1000px;
+  // min-width: 1000px;
+  width: 80vw;
   // min-height: 900px;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 16px;
@@ -40,8 +41,7 @@
 }
 
 .body-todo {
-  min-width: 670px;
-  // height: 590px;
+  width: 80%;
   padding: 30px;
 }
 

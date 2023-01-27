@@ -1,6 +1,6 @@
 .input {
   max-width: 100%;
-  min-height: 68px;
+  min-height: 10vh;
   border-radius: 40px;
   display: flex;
   overflow: hidden;
@@ -14,19 +14,19 @@
 .input__text {
   padding: 10px 0 10px 30px;
   width: 100%;
-  font-size: 36px;
+  font-size: 5.5vh;
   color: rgba(255, 255, 255, 1);
   background: #25273c;
   border: none;
   outline: none;
   &::placeholder {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 36px;
+    font-size: 5.5vh;
     font-family: "Monda", sans-serif;
   }
 }
 .input__btn {
-  min-width: 110px;
+  width: 25%;
   min-height: 100%;
   background: rgba(90, 255, 49, 0.6);
   border: none;
