@@ -10,11 +10,12 @@
 // @import "blocks/title_balls";
 @import 'blocks/input';
 @import 'blocks/list';
+@import 'blocks/img';
 
 // blocks
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -24,6 +25,12 @@
 
   background: #8a2387;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
+}
+.flex__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper {
