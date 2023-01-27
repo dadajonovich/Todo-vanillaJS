@@ -2,6 +2,7 @@
   margin-top: 52px;
   line-height: 20px;
   backdrop-filter: invert(100%);
+  cursor: pointer;
   &__item:last-child .list__vl {
     visibility: hidden;
   }

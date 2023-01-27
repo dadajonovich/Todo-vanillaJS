@@ -168,6 +168,7 @@ menu {
   line-height: 20px;
   -webkit-backdrop-filter: invert(100%);
           backdrop-filter: invert(100%);
+  cursor: pointer;
 }
 .list__item:last-child .list__vl {
   visibility: hidden;
