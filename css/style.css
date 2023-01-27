@@ -170,14 +170,21 @@ h3 {
 .list__text {
   font-family: "Monda";
   font-size: 2rem;
-  color: white;
+  color: rgb(212, 208, 208);
 }
 .list__delete-btn {
+  display: block;
   font-size: 5rem;
+  text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  transition: all 0.2s ease;
+}
+.list__delete-btn:hover {
+  transform: translateY(2px);
+  text-shadow: 0 0 0 black;
   cursor: pointer;
 }
 .list__vl {

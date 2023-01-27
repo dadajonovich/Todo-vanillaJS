@@ -14,12 +14,19 @@
   &__text {
     font-family: 'Monda';
     font-size: 2rem;
-    color: white;
+    color: rgb(212, 208, 208);
   }
   &__delete-btn {
+    display: block;
     font-size: 5rem;
+    text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
     user-select: none;
-    cursor: pointer;
+    transition: all .2s ease ;
+    &:hover {
+      transform: translateY(2px);
+      text-shadow: 0 0 0 black;
+      cursor: pointer;
+    }
   }
   &__vl {
     margin: 0 auto;
