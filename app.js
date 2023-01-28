@@ -136,11 +136,13 @@ const tasks = [
   }
 
   function onDeleteHandler({ target }) {
-    const parent = target.closest("[data-task-id]");
-    const id = parent.dataset.taskId;
-    const confirmed = deleteTask(id);
-    deleteTaskFromHtml(parent, confirmed);
-    countListItems();
+    if (target.classList.contains("list__delete-btn")) {
+      const parent = target.closest("[data-task-id]");
+      const id = parent.dataset.taskId;
+      const confirmed = deleteTask(id);
+      deleteTaskFromHtml(parent, confirmed);
+      countListItems();
+    } else return;
   }
 
   function countListItems() {
