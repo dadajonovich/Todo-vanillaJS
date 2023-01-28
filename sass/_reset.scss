@@ -1,4 +1,5 @@
 /* reset styles */
+
 *,
 *::after,
 *::before {
@@ -17,7 +18,21 @@ p {
   font-weight: inherit;
 }
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1 rem === 10px
+  -webkit-text-size-adjust: 16px;
+  -ms-text-size-adjust: 16px;
+  @include respond(land) {
+    font-size: 59%;
+  }
+  @include respond(tablet-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tablet) {
+    font-size: 50%;
+  }
+  @include respond(phone) {
+    font-size: 45%;
+  }
 }
 body {
   font-family: 'Monda', sans-serif;
@@ -35,8 +50,6 @@ input[type='number']:hover,
 input[type='number']:focus {
   -moz-appearance: number-input;
 }
-
-
 
 /*  clear button */
 input[type='search']::-webkit-search-decoration,

@@ -24,6 +24,28 @@ p {
 
 html {
   font-size: 62.5%;
+  -webkit-text-size-adjust: 16px;
+  -ms-text-size-adjust: 16px;
+}
+@media only screen and (max-width: 88em) {
+  html {
+    font-size: 59%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 45%;
+  }
 }
 
 body {
@@ -250,14 +272,15 @@ h3 {
   margin: 0 auto;
   min-height: 100vh;
   background: #8a2387;
+  will-change: transform;
 }
 
 .wrapper {
   position: relative;
   margin: 1rem;
   width: 80%;
-  min-height: 90rem;
-  max-height: 90rem;
+  min-height: 95rem;
+  max-height: 95rem;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

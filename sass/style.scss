@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 // import
+@import 'blocks/mixin';
 @import 'reset';
 @import 'animation';
 @import 'media';
@@ -12,6 +13,7 @@
 @import 'blocks/input';
 @import 'blocks/list';
 @import 'blocks/img';
+
 
 // blocks
 .container {
@@ -23,15 +25,16 @@
   margin: 0 auto;
   min-height: 100vh;
   background: #8a2387;
-  // background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
+  //background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
+   will-change: transform;
 }
 
 .wrapper {
   position: relative;
   margin: 1rem;
   width: 80%;
-  min-height: 90rem;
-  max-height: 90rem;
+  min-height: 95rem;
+  max-height: 95rem;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -45,7 +48,6 @@
   /* Hide scrollbar  */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-
   &::-webkit-scrollbar {
     display: none;
   }
