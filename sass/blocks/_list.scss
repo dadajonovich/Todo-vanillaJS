@@ -7,12 +7,12 @@
   }
   &__task {
     display: flex;
-    padding: 0 25px 0 25px;
+    padding: 1rem 2.5rem 1rem 2.5rem;
     justify-content: space-between;
     align-items: center;
   }
   &__text {
-    font-family: 'Monda';
+    font-family: "Monda";
     font-size: 2rem;
     color: rgb(212, 208, 208);
   }
@@ -21,7 +21,7 @@
     font-size: 5rem;
     text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
     user-select: none;
-    transition: all .2s ease ;
+    transition: all 0.2s ease;
     &:hover {
       transform: translateY(2px);
       text-shadow: 0 0 0 black;
@@ -31,12 +31,12 @@
   &__vl {
     margin: 0 auto;
     width: 80%;
-    border: 1px solid rgba(72, 64, 64, 0.37);
+    border: 1px solid rgb(212, 208, 208);
   }
   &__footer {
     p {
-      padding-right: 2rem;
-      font-family: 'Monda';
+      margin: 2rem;
+      font-family: "Press Start 2P", cursive;
       font-size: 2rem;
       text-align: right;
     }

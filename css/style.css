@@ -70,15 +70,30 @@ menu {
   list-style: none;
 }
 
-/* Animation */
-/* @keyframes glassBall {
-  from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+/* @keyframes color-change-2x {
+  0% {
+    color: #ecef32;
+  }
+  50% {
+    color: #89fffd;
+  }
+  100% {
+    color: #ecef32;
+  }
+}
+
+@keyframes glassBall {
+  from {
+    -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
 } */
 .title {
-  margin: 1rem;
+  margin: 2.5rem;
   font-family: "Press Start 2P", cursive;
-  font-size: 10rem;
+  font-size: 5rem;
   font-weight: bold;
   color: rgb(223, 250, 51);
   -webkit-user-select: none;
@@ -88,7 +103,7 @@ menu {
 }
 
 h3 {
-  margin-top: 1rem;
+  margin: 1rem;
   font-size: 2rem;
   font-family: "Press Start 2P", cursive;
   color: rgba(60, 5, 58, 0.888);
@@ -102,16 +117,19 @@ h3 {
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
   transition: all 0.23s ease-in-out;
+  /*   &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.556);
+    transform: translateY(3px);
+  } */
 }
-.input:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.556);
-  transform: translateY(3px);
+.input:focus-within {
+  outline: solid rgb(223, 250, 51);
 }
 
 .input__text {
   padding: 10px 0 10px 30px;
   width: 100%;
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(255, 255, 255);
   background: #25273c;
   border: none;
@@ -119,17 +137,17 @@ h3 {
 }
 .input__text::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Monda", sans-serif;
 }
 .input__text:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Monda", sans-serif;
 }
 .input__text::placeholder {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Monda", sans-serif;
 }
 
@@ -163,7 +181,7 @@ h3 {
 }
 .list__task {
   display: flex;
-  padding: 0 25px 0 25px;
+  padding: 1rem 2.5rem 1rem 2.5rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -190,11 +208,11 @@ h3 {
 .list__vl {
   margin: 0 auto;
   width: 80%;
-  border: 1px solid rgba(72, 64, 64, 0.37);
+  border: 1px solid rgb(212, 208, 208);
 }
 .list__footer p {
-  padding-right: 2rem;
-  font-family: "Monda";
+  margin: 2rem;
+  font-family: "Press Start 2P", cursive;
   font-size: 2rem;
   text-align: right;
 }
@@ -216,36 +234,27 @@ h3 {
 }
 
 .img__notebook {
-  width: 50rem;
+  width: 25rem;
   position: absolute;
-  top: 30rem;
-  left: 80rem;
+  top: 0rem;
+  left: 90rem;
 }
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
   margin: 0 auto;
   min-height: 100vh;
   background: #8a2387;
-  background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
-}
-
-.flex__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .wrapper {
+  position: relative;
   margin: 1rem;
-  min-width: 120rem;
-  min-height: 900px;
+  width: 80%;
+  min-height: 40rem;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

@@ -6,23 +6,26 @@
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
   transition: all 0.23s ease-in-out;
-  &:hover {
+  /*   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.556);
     transform: translateY(3px);
+  } */
+  &:focus-within {
+    outline: solid rgb(223, 250, 51);
   }
 }
 .input__text {
   padding: 10px 0 10px 30px;
   width: 100%;
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgba(255, 255, 255, 1);
   background: #25273c;
   border: none;
   outline: none;
   &::placeholder {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 2rem;
-    font-family: 'Monda', sans-serif;
+    font-size: 3rem;
+    font-family: "Monda", sans-serif;
   }
 }
 .input__btn {

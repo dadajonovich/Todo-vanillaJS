@@ -1,42 +1,35 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 // import
-@import 'reset';
-@import 'animation';
-@import 'blocks/title';
+@import "reset";
+@import "animation";
+@import "media";
+@import "blocks/title";
 // @import "blocks/title_balls";
-@import 'blocks/input';
-@import 'blocks/list';
-@import 'blocks/img';
+@import "blocks/input";
+@import "blocks/list";
+@import "blocks/img";
 
 // blocks
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
   margin: 0 auto;
   min-height: 100vh;
-
   background: #8a2387;
-  background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
-}
-.flex__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
 }
 
 .wrapper {
+  position: relative;
   margin: 1rem;
-  min-width: 120rem;
-  min-height: 900px;
+  width: 80%;
+  min-height: 40rem;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

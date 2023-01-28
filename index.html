@@ -9,62 +9,38 @@
   </head>
   <body>
     <div class="container">
-      <img src="img/notebook-svgrepo-com.svg" alt="notebook" class="img__notebook"/>
-      <div class="flex__container">
-        <h2 class="title">ToDo List</h2>
-        <div class="wrapper">
-          <div class="body-todo">
-            <form name="addTask" class="input">
-              <input
-                type="text"
-                class="input__text"
-                placeholder="Create a new todo..."
-              />
-              <button class="input__btn">
-                <img src="img/Arrow.svg" alt="arrow" />
-              </button>
-            </form>
-            <ul class="list">
-              <li class="list__item">
-                <div class="list__task" data-state="active">
-                  <p class="list__text">Run nigga</p>
-                  <span class="list__delete-btn">&#10006;</span>
-                </div>
-                <div id="vl" class="list__vl"></div>
-              </li>
-              <li class="list__item">
-                <div class="list__task" data-state="completed">
-                  <p class="list__text">Run nigga</p>
-                  <span class="list__delete-btn">&#10006;</span>
-                </div>
-                <div id="vl" class="list__vl"></div>
-              </li>
-              <li class="list__item">
-                <div class="list__task" data-state="completed">
-                  <p class="list__text">Run nigga</p>
-                  <span class="list__delete-btn">&#10006;</span>
-                </div>
-                <div id="vl" class="list__vl"></div>
-              </li>
-              <li class="list__item">
-                <div class="list__task" data-state="completed">
-                  <p class="list__text">Run nigga</p>
-                  <span class="list__delete-btn">&#10006;</span>
-                </div>
-                <div id="vl" class="list__vl"></div>
-              </li>
-            </ul>
-            <div class="list__footer">
-              <p>5 Items</p>
-            </div>
+      <h2 class="title">ToDo List</h2>
+      <div class="wrapper">
+        <!-- <img
+          src="img/notebook-svgrepo-com.svg"
+          alt="notebook"
+          class="img__notebook"
+        /> -->
+        <div class="body-todo">
+          <form name="addTask" class="input">
+            <input
+              name="taskText"
+              type="text"
+              class="input__text"
+              placeholder="Что делать будем?"
+            />
+            <button class="input__btn">
+              <img src="img/Arrow.svg" alt="arrow" />
+            </button>
+          </form>
+          <ul class="list"></ul>
+          <div class="list__footer">
+            <p class="list__counter">Делу время и потехе час</p>
           </div>
         </div>
-        <h3>© Made By Timur Dadajonovich 2022 - <span id="date">2023</span></h3>
       </div>
-      <img src="img/feather-svgrepo-com.svg" alt="feather" class="img__feather"/>
+      <h3 class="footer">
+        © Made By <span class="whoIs">Timur Norbaev</span>
+        <span id="date">2023</span>
+      </h3>
     </div>
 
     <!-- JS -->
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
