@@ -8,7 +8,8 @@
 *::before {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1,
@@ -140,9 +141,14 @@ h3 {
   max-width: 100%;
   min-height: 7rem;
   border-radius: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
+  -webkit-transition: all 0.23s ease-in-out;
+  -o-transition: all 0.23s ease-in-out;
   transition: all 0.23s ease-in-out;
   /*   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.556);
@@ -178,6 +184,16 @@ h3 {
   font-size: 3rem;
   font-family: "Monda", sans-serif;
 }
+.input__text::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 3rem;
+  font-family: "Monda", sans-serif;
+}
+.input__text::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 3rem;
+  font-family: "Monda", sans-serif;
+}
 .input__text::placeholder {
   color: rgba(255, 255, 255, 0.7);
   font-size: 3rem;
@@ -193,6 +209,8 @@ h3 {
   display: grid;
   place-items: center;
   cursor: pointer;
+  -webkit-transition: all 0.23s ease-in-out;
+  -o-transition: all 0.23s ease-in-out;
   transition: all 0.23s ease-in-out;
 }
 @media only screen and (max-width: 37.5em) {
@@ -218,10 +236,16 @@ h3 {
   visibility: hidden;
 }
 .list__task {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 1rem 2.5rem 1rem 2.5rem;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .list__text {
   font-family: "Monda", sans-serif;
@@ -236,10 +260,14 @@ h3 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .list__delete-btn:hover {
-  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
   text-shadow: 0 0 0 black;
   cursor: pointer;
 }
@@ -280,13 +308,23 @@ h3 {
 
 .container {
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   min-height: 100vh;
   background: #8a2387;
+  background: -o-linear-gradient(130deg, #f27121, #e94057, #8a2387);
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
   will-change: transform;
 }
@@ -309,13 +347,21 @@ h3 {
   max-height: 95rem;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 2rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: scroll;
   /* Hide scrollbar  */
   -ms-overflow-style: none; /* IE and Edge */
