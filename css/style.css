@@ -129,6 +129,7 @@ h3 {
 .input__text {
   padding: 10px 0 10px 30px;
   width: 100%;
+  font-family: "Monda", sans-serif;
   font-size: 3rem;
   color: rgb(255, 255, 255);
   background: #25273c;
@@ -186,8 +187,8 @@ h3 {
   align-items: center;
 }
 .list__text {
-  font-family: "Monda";
-  font-size: 2rem;
+  font-family: "Monda", sans-serif;
+  font-size: 3rem;
   color: rgb(212, 208, 208);
 }
 .list__delete-btn {
