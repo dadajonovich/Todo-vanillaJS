@@ -44,7 +44,7 @@ html {
 }
 @media only screen and (max-width: 37.5em) {
   html {
-    font-size: 45%;
+    font-size: 40%;
   }
 }
 
@@ -130,6 +130,11 @@ h3 {
   font-family: "Press Start 2P", cursive;
   color: rgba(60, 5, 58, 0.888);
 }
+@media only screen and (max-width: 37.5em) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
 
 .input {
   max-width: 100%;
@@ -158,6 +163,11 @@ h3 {
   border: none;
   outline: none;
 }
+@media only screen and (max-width: 37.5em) {
+  .input__text {
+    padding: 10px 0 10px 20px;
+  }
+}
 .input__text::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   font-size: 3rem;
@@ -184,6 +194,11 @@ h3 {
   place-items: center;
   cursor: pointer;
   transition: all 0.23s ease-in-out;
+}
+@media only screen and (max-width: 37.5em) {
+  .input__btn img {
+    width: 50%;
+  }
 }
 .input__btn:hover {
   background-color: rgba(67, 152, 45, 0.815);
@@ -272,7 +287,18 @@ h3 {
   margin: 0 auto;
   min-height: 100vh;
   background: #8a2387;
+  background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
   will-change: transform;
+}
+@media only screen and (max-width: 88em) {
+  .container {
+    background: #8a2387;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    padding: 0.5rem;
+  }
 }
 
 .wrapper {
@@ -298,8 +324,29 @@ h3 {
 .wrapper::-webkit-scrollbar {
   display: none;
 }
+@media only screen and (max-width: 88em) {
+  .wrapper {
+    min-height: 55rem;
+    max-height: 55rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .wrapper {
+    width: 95%;
+  }
+}
 
 .body-todo {
   width: 80%;
   padding: 30px;
+}
+@media only screen and (max-width: 75em) {
+  .body-todo {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .body-todo {
+    width: 98%;
+  }
 }

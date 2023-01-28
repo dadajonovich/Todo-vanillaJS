@@ -12,4 +12,7 @@ h3 {
   font-size: 2rem;
   font-family: 'Press Start 2P', cursive;
   color: rgba(60, 5, 58, 0.888);
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
 }

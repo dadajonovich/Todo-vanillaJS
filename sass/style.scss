@@ -14,7 +14,6 @@
 @import 'blocks/list';
 @import 'blocks/img';
 
-
 // blocks
 .container {
   padding: 2rem;
@@ -25,8 +24,14 @@
   margin: 0 auto;
   min-height: 100vh;
   background: #8a2387;
-  //background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
-   will-change: transform;
+  background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
+  will-change: transform;
+  @include respond(land) {
+    background: #8a2387;
+  }
+  @include respond(tablet-land) {
+    padding: 0.5rem;
+  }
 }
 
 .wrapper {
@@ -51,9 +56,23 @@
   &::-webkit-scrollbar {
     display: none;
   }
+  @include respond(land) {
+    min-height: 55rem;
+    max-height: 55rem;
+  }
+  @include respond(tablet-land) {
+    width: 95%;
+  }
 }
 
 .body-todo {
   width: 80%;
   padding: 30px;
+  @include respond(tablet-land) {
+    width: 90%;
+  }
+  @include respond(phone) {
+        width: 98%;
+
+  }
 }
