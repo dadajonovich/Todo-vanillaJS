@@ -17,10 +17,11 @@
 .input__text {
   padding: 10px 0 10px 30px;
   width: 100%;
+  
   font-family: "Monda", sans-serif;
   font-size: 3rem;
   color: rgba(255, 255, 255, 1);
-  background: #25273c;
+  background: #25273c !important;
   border: none;
   outline: none;
   &::placeholder {
