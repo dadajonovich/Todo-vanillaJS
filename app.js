@@ -118,7 +118,7 @@ date.innerText = `${new Date().getFullYear()}`;
       _id: `task-${Math.random()}`,
     };
     objOfTasks[newTask._id] = newTask;
-    localStorage.setItem("tasks", JSON.stringify(objOfTasks));
+    changeLocalStorage(objOfTasks);
     return { ...newTask };
   }
 
@@ -126,7 +126,7 @@ date.innerText = `${new Date().getFullYear()}`;
     const isConfirm = confirm("С глаз долой?");
     if (!isConfirm) return isConfirm;
     delete objOfTasks[id];
-    localStorage.setItem("tasks", JSON.stringify(objOfTasks));
+    changeLocalStorage(objOfTasks);
     return isConfirm;
   }
 
@@ -157,5 +157,10 @@ date.innerText = `${new Date().getFullYear()}`;
     if (type === "mouseover") {
       name.textContent = "Привет, Карен!";
     } else name.textContent = "© Made By Timur Norbaev 2023";
+  }
+
+  function changeLocalStorage(objOfTasks) {
+    const tasksOnJson = JSON.stringify(objOfTasks);
+    localStorage.setItem("tasks", tasksOnJson);
   }
 })();
