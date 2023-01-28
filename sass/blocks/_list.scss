@@ -1,9 +1,7 @@
 .list {
-  // margin-top: 52px;
-  margin-top: 5%;
-  line-height: 1.25;
+  margin-top: 3rem;
   backdrop-filter: invert(100%);
-  cursor: pointer;
+  border-radius: 1rem;
   &__item:last-child .list__vl {
     visibility: hidden;
   }
@@ -14,26 +12,32 @@
     align-items: center;
   }
   &__text {
-    font-family: "Monda";
-    font-size: 6vh;
-    color: white;
+    font-family: 'Monda';
+    font-size: 2rem;
+    color: rgb(212, 208, 208);
   }
   &__delete-btn {
-    font-size: 10vh;
+    display: block;
+    font-size: 5rem;
+    text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
     user-select: none;
+    transition: all .2s ease ;
+    &:hover {
+      transform: translateY(2px);
+      text-shadow: 0 0 0 black;
+      cursor: pointer;
+    }
   }
   &__vl {
     margin: 0 auto;
     width: 80%;
-    border: 0.5vh solid rgba(72, 64, 64, 0.37);
+    border: 1px solid rgba(72, 64, 64, 0.37);
   }
   &__footer {
-    border: 2px solid #ad02fe;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     p {
-      padding-right: 25px;
-      font-family: "Monda";
-      font-size: 4vh;
+      padding-right: 2rem;
+      font-family: 'Monda';
+      font-size: 2rem;
       text-align: right;
     }
   }
