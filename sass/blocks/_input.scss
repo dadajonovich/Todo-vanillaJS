@@ -17,16 +17,19 @@
 .input__text {
   padding: 10px 0 10px 30px;
   width: 100%;
-  font-family: "Monda", sans-serif;
+  font-family: 'Monda', sans-serif;
   font-size: 3rem;
   color: rgba(255, 255, 255, 1);
-  background: #25273c;
+  background: #25273c !important;
   border: none;
   outline: none;
+  @include respond(phone) {
+    padding: 10px 0 10px 20px;
+  }
   &::placeholder {
     color: rgba(255, 255, 255, 0.7);
     font-size: 3rem;
-    font-family: "Monda", sans-serif;
+    font-family: 'Monda', sans-serif;
   }
 }
 .input__btn {
@@ -39,6 +42,11 @@
   place-items: center;
   cursor: pointer;
   transition: all 0.23s ease-in-out;
+  img {
+    @include respond(phone) {
+      width: 50%;
+    }
+  }
   &:hover {
     background-color: rgba(67, 152, 45, 0.815);
   }

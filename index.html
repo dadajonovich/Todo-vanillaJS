@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/clipboard-list-svgrepo-com.svg" type="image/x-icon">
   </head>
   <body>
     <div class="container">
@@ -19,10 +20,12 @@
         <div class="body-todo">
           <form name="addTask" class="input">
             <input
+              autocomplete="off"
               name="taskText"
               type="text"
               class="input__text"
               placeholder="Что делать будем?"
+              autofocus
             />
             <button class="input__btn">
               <img src="img/Arrow.svg" alt="arrow" />
