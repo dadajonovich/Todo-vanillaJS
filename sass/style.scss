@@ -1,18 +1,14 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 // import
-@import 'blocks/mixin';
-@import 'reset';
-@import 'animation';
-@import 'media';
-@import 'blocks/title';
-// @import "blocks/title_balls";
-@import 'blocks/input';
-@import 'blocks/list';
-@import 'blocks/img';
+@import "blocks/mixin";
+@import "reset";
+@import "blocks/title";
+@import "blocks/input";
+@import "blocks/list";
 
 // blocks
 .container {
@@ -72,7 +68,6 @@
     width: 90%;
   }
   @include respond(phone) {
-        width: 98%;
-
+    width: 98%;
   }
 }
