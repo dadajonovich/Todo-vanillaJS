@@ -126,8 +126,12 @@ h3 {
   transition: all 0.23s ease-in-out;
 }
 .input:focus-within {
-  border-radius: 10rem;
   outline: solid rgb(223, 250, 51);
+}
+@media only screen and (max-width: 37.5em) {
+  .input:focus-within {
+    outline: none;
+  }
 }
 
 .input__text {
@@ -282,8 +286,7 @@ h3 {
   position: relative;
   margin: 1rem;
   width: 80%;
-  min-height: 95rem;
-  max-height: 95rem;
+  min-height: 100%;
   background: rgba(255, 255, 255, 0.18);
   border-radius: 2rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -303,8 +306,7 @@ h3 {
 }
 @media only screen and (max-width: 88em) {
   .wrapper {
-    min-height: 55rem;
-    max-height: 55rem;
+    min-height: 100%;
   }
 }
 @media only screen and (max-width: 75em) {

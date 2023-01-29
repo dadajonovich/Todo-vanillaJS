@@ -7,8 +7,10 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
   transition: all 0.23s ease-in-out;
   &:focus-within {
-    border-radius: 10rem;
     outline: solid rgb(223, 250, 51);
+    @include respond(phone) {
+      outline: none;
+    }
   }
 }
 .input__text {
