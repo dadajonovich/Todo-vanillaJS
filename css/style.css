@@ -196,6 +196,9 @@ h3 {
   cursor: pointer;
   transition: all 0.23s ease-in-out;
 }
+.input__btn img {
+  width: 50%;
+}
 @media only screen and (max-width: 37.5em) {
   .input__btn img {
     width: 50%;

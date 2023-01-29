@@ -46,6 +46,7 @@
   cursor: pointer;
   transition: all 0.23s ease-in-out;
   img {
+    width: 50%;
     @include respond(phone) {
       width: 50%;
     }
