@@ -6,10 +6,8 @@
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
   transition: all 0.23s ease-in-out;
-  &:active {
-    outline: none;
-  }
   &:focus-within {
+    border-radius: 10rem;
     outline: solid rgb(223, 250, 51);
   }
 }
@@ -50,9 +48,6 @@
   transition: all 0.23s ease-in-out;
   img {
     width: 50%;
-    @include respond(phone) {
-      width: 50%;
-    }
   }
   &:hover {
     background-color: rgba(67, 152, 45, 0.815);
