@@ -4,6 +4,8 @@
 
 ## Todo - vanilla JS
 
+### https://dadajonovich.github.io/my_first_todo/
+
 ---
 
 - :game_die: This is a training project that uses the following technologies: HTML CSS SCSS JS
