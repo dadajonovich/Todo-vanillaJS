@@ -49,7 +49,10 @@
   cursor: pointer;
   transition: all 0.23s ease-in-out;
   img {
-    width: 50%;
+    max-width: 10rem;
+    @include respond (tablet) {
+      width: 50%;
+    }
   }
   &:hover {
     background-color: rgba(67, 152, 45, 0.815);
