@@ -1,15 +1,7 @@
-<div id="header" align="center">
-
-# The first project with other student!
-
-## Todo - vanilla JS
-
-### https://dadajonovich.github.io/my_first_todo/
-
+## TODO
 ---
-
-- :game_die: This is a training project that uses the following technologies: HTML CSS SCSS JS
-- :joystick: This project does not use libraries and frameworks!
+This vanilla JS application was written in order to gain practical collaboration skills in the Git repository, together with <a href="https://github.com/KarVarr">Karen Vardanian</a>
+---
 
 <img src="img/image.png" alt="image" width="900" />
 </div>
