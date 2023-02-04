@@ -5,6 +5,8 @@ This vanilla JS application was written in order to gain practical collaboration
 
 ---
 
+<a href="https://dadajonovich.github.io/Todo-vanillaJS/">App on GitHub Pages</a>
+
 <img src="img/image.png" alt="image" width="900" />
 </div>
 
