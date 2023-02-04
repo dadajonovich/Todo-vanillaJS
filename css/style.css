@@ -1,14 +1,12 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Monda&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 /* reset styles */
 *,
 *::after,
 *::before {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -55,8 +53,8 @@ body {
 /*  INPUT */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+  -webkit-appearance: none;
 }
 
 input[type=number] {
@@ -94,21 +92,21 @@ menu {
 
 .title {
   margin: 2.5rem;
-  font-family: "Press Start 2P";
-  font-size: 5rem;
-  font-weight: bold;
-  color: rgb(223, 250, 51);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  color: rgb(223, 250, 51);
+  font-family: "Press Start 2P";
+  font-size: 5rem;
+  font-weight: bold;
 }
 
 h3 {
   margin: 1rem;
-  font-size: 2rem;
-  font-family: "Press Start 2P";
   color: rgba(60, 5, 58, 0.888);
+  font-family: "Press Start 2P";
+  font-size: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   h3 {
@@ -117,13 +115,13 @@ h3 {
 }
 
 .input {
-  max-width: 100%;
-  min-height: 7rem;
-  border-radius: 10rem;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
+  max-width: 100%;
+  min-height: 7rem;
   transition: all 0.23s ease-in-out;
+  border-radius: 10rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
 }
 .input:focus-within {
   outline: solid rgb(223, 250, 51);
@@ -135,14 +133,14 @@ h3 {
 }
 
 .input__text {
-  padding: 10px 0 10px 30px;
   width: 100%;
-  font-family: "Press Start 2P";
-  font-size: 3rem;
+  padding: 10px 0 10px 30px;
   color: rgb(255, 255, 255);
-  background: #25273c !important;
   border: none;
   outline: none;
+  background: #25273c !important;
+  font-family: "Press Start 2P";
+  font-size: 3rem;
 }
 @media only screen and (max-width: 37.5em) {
   .input__text {
@@ -150,22 +148,22 @@ h3 {
   }
 }
 .input__text::-moz-placeholder {
-  border: none;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 3rem;
+  border: none;
   font-family: "Press Start 2P";
+  font-size: 3rem;
 }
 .input__text:-ms-input-placeholder {
-  border: none;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 3rem;
+  border: none;
   font-family: "Press Start 2P";
+  font-size: 3rem;
 }
 .input__text::placeholder {
-  border: none;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 3rem;
+  border: none;
   font-family: "Press Start 2P";
+  font-size: 3rem;
 }
 @media only screen and (max-width: 56.25em) {
   .input__text::-moz-placeholder {
@@ -191,15 +189,15 @@ h3 {
 }
 
 .input__btn {
-  padding: 1rem;
   width: 25%;
   min-height: 50%;
-  background: rgba(90, 255, 49, 0.6);
-  border: none;
-  outline: none;
-  border-radius: 0px 30px 30px 0px;
+  padding: 1rem;
   cursor: pointer;
   transition: all 0.23s ease-in-out;
+  border: none;
+  border-radius: 0px 30px 30px 0px;
+  outline: none;
+  background: rgba(90, 255, 49, 0.6);
 }
 .input__btn img {
   max-width: 10rem;
@@ -219,59 +217,59 @@ h3 {
 
 .list {
   margin-top: 3rem;
+  border-radius: 1rem;
   -webkit-backdrop-filter: invert(100%);
           backdrop-filter: invert(100%);
-  border-radius: 1rem;
 }
 .list__item:last-child .list__vl {
   visibility: hidden;
 }
 .list__task {
   display: flex;
-  padding: 1rem 2.5rem 1rem 2.5rem;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem 1rem 2.5rem;
 }
 .list__text {
+  color: rgb(212, 208, 208);
   font-family: "Press Start 2P";
   font-size: 3rem;
-  color: rgb(212, 208, 208);
 }
 .list__delete-btn {
   display: block;
-  font-size: 5rem;
-  text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   transition: all 0.2s ease;
+  text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
+  font-size: 5rem;
 }
 .list__delete-btn:hover {
+  cursor: pointer;
   transform: translateY(2px);
   text-shadow: 0 0 0 black;
-  cursor: pointer;
 }
 .list__vl {
-  margin: 0 auto;
   width: 80%;
+  margin: 0 auto;
   border: 1px solid rgb(212, 208, 208);
 }
 .list__footer p {
   margin: 2rem;
+  text-align: right;
   font-family: "Press Start 2P", cursive;
   font-size: 2rem;
-  text-align: right;
 }
 
 .container {
-  padding: 2rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
   min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
   background: #8a2387;
   background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
   will-change: transform;
@@ -289,25 +287,22 @@ h3 {
 
 .wrapper {
   position: relative;
-  margin: 1rem;
+  display: flex;
+  overflow: scroll;
+  align-items: center;
+  flex-direction: column;
   width: 80%;
   min-height: 100%;
-  background: rgba(255, 255, 255, 0.18);
+  margin: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.18);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: scroll;
   /* Hide scrollbar  */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-}
-.wrapper::-webkit-scrollbar {
-  display: none;
 }
 @media only screen and (max-width: 88em) {
   .wrapper {
@@ -318,6 +313,9 @@ h3 {
   .wrapper {
     width: 95%;
   }
+}
+.wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .body-todo {

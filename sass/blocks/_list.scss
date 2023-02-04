@@ -1,44 +1,55 @@
 .list {
   margin-top: 3rem;
-  backdrop-filter: invert(100%);
+
   border-radius: 1rem;
+
+  backdrop-filter: invert(100%);
   &__item:last-child .list__vl {
     visibility: hidden;
   }
   &__task {
     display: flex;
-    padding: 1rem 2.5rem 1rem 2.5rem;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 2.5rem 1rem 2.5rem;
   }
   &__text {
+    color: rgb(212, 208, 208);
+
     font-family: "Press Start 2P";
     font-size: 3rem;
-    color: rgb(212, 208, 208);
   }
   &__delete-btn {
     display: block;
-    font-size: 5rem;
-    text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
+
     user-select: none;
     transition: all 0.2s ease;
+
+    text-shadow: 0 3px 3px rgba(9, 9, 9, 0.879);
+
+    font-size: 5rem;
     &:hover {
-      transform: translateY(2px);
-      text-shadow: 0 0 0 black;
       cursor: pointer;
+      transform: translateY(2px);
+
+      text-shadow: 0 0 0 black;
     }
   }
   &__vl {
-    margin: 0 auto;
     width: 80%;
+    margin: 0 auto;
+
     border: 1px solid rgb(212, 208, 208);
   }
   &__footer {
     p {
       margin: 2rem;
+
+      text-align: right;
+
       font-family: "Press Start 2P", cursive;
       font-size: 2rem;
-      text-align: right;
     }
   }
 }
