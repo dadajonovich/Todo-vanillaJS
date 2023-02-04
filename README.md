@@ -1,7 +1,7 @@
 ## TODO
 ---
 
-This application on vanilla JS was written in order to gain practical collaboration skills in the Git repository, together with <a href="https://github.com/KarVarr">Karen Vardanian</a>
+This application on vanilla JS was written in order to gain practical collaboration skills in the GitHub repository, together with <a href="https://github.com/KarVarr">Karen Vardanian</a>
 
 ---
 
