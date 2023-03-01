@@ -5,7 +5,7 @@ This application on vanilla JS was written in order to gain practical collaborat
 
 ---
 
-<a href="https://dadajonovich.github.io/Todo-vanillaJS/">App on GitHub Pages</a>
+<a href="https://dadajonovich.github.io/todo-vanillaJS/">App on GitHub Pages</a>
 
 ---
 
