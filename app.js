@@ -13,8 +13,8 @@
   renderAllTasks(objOfTasks);
   form.addEventListener('submit', onFormSubmitHandler);
   listContainer.addEventListener('click', onDeleteHandler);
-  name.addEventListener('mouseover', renameHendler);
-  name.addEventListener('mouseout', renameHendler);
+  name.addEventListener('mouseover', renameHandler);
+  name.addEventListener('mouseout', renameHandler);
   document.addEventListener('DOMContentLoaded', countListItems);
 
   function renderAllTasks(tasksList) {
