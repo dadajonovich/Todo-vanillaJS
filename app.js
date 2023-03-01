@@ -1,8 +1,4 @@
 'use strict';
-//date ==========
-let date = document.getElementById('date');
-date.innerText = `${new Date().getFullYear()}`;
-//date ===========
 
 (() => {
   const objOfTasks = JSON.parse(localStorage.getItem('tasks')) || {};
