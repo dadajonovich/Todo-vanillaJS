@@ -43,7 +43,7 @@
       font-size: 2.4rem;
     }
     @include respond(phone) {
-      visibility: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
