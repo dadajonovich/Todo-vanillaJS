@@ -120,7 +120,7 @@ date.innerText = `${new Date().getFullYear()}`;
     } else counter.textContent = 'Безделье это игрушка дьявола...';
   }
 
-  function renameHendler(event) {
+  function renameHandler(event) {
     const type = event.type;
     if (type === 'mouseover') {
       name.textContent = 'Привет, Карен!';
