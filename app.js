@@ -1,21 +1,25 @@
 'use strict';
 
 (() => {
-  const objOfTasks = JSON.parse(localStorage.getItem('tasks')) || {};
-
   // Elements
+  const objOfTasks = JSON.parse(localStorage.getItem('tasks')) || {};
   const listContainer = document.querySelector('.list');
   const form = document.forms['addTask'];
   const input = form.elements['taskText'];
   const counter = document.querySelector('.list__counter');
   const name = document.querySelector('.footer');
+  const inputText = document.querySelector('.input__text');
 
   renderAllTasks(objOfTasks);
   form.addEventListener('submit', onFormSubmitHandler);
   listContainer.addEventListener('click', onDeleteHandler);
   name.addEventListener('mouseover', renameHandler);
   name.addEventListener('mouseout', renameHandler);
-  document.addEventListener('DOMContentLoaded', countListItems);
+  window.addEventListener('resize', (e) => {
+    if (document.documentElement.clientWidth < 600) {
+      inputText.placeholder = '???';
+    } else inputText.placeholder = 'Что делать будем?';
+  });
 
   function renderAllTasks(tasksList) {
     if (!tasksList) {
@@ -24,7 +28,7 @@
     }
 
     const fragment = document.createDocumentFragment();
-    Object.values(tasksList).forEach(task => {
+    Object.values(tasksList).forEach((task) => {
       const li = listItemTemplate(task);
       fragment.append(li);
     });
@@ -71,8 +75,6 @@
     const listItem = listItemTemplate(task);
     listContainer.prepend(listItem);
     form.reset();
-
-    countListItems();
   }
 
   function createNewTask(body) {
@@ -105,15 +107,7 @@
       const id = parent.dataset.taskId;
       const confirmed = deleteTask(id);
       deleteTaskFromHtml(parent, confirmed);
-      countListItems();
     } else return;
-  }
-
-  function countListItems() {
-    const lenghtObj = Object.keys(objOfTasks).length;
-    if (lenghtObj) {
-      counter.textContent = `${lenghtObj} items`;
-    } else counter.textContent = 'Безделье это игрушка дьявола...';
   }
 
   function renameHandler(event) {
@@ -126,5 +120,13 @@
   function changeLocalStorage(objOfTasks) {
     const tasksOnJson = JSON.stringify(objOfTasks);
     localStorage.setItem('tasks', tasksOnJson);
+    countListItems(objOfTasks);
+  }
+
+  function countListItems(tasks) {
+    const lenghtObj = Object.keys(tasks).length;
+    if (lenghtObj != 0) {
+      counter.textContent = `${lenghtObj} items`;
+    } else counter.textContent = 'Безделье это игрушка дьявола...';
   }
 })();

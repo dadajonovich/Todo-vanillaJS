@@ -26,7 +26,7 @@
   outline: none;
   background: #25273c !important;
 
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
   font-size: 3rem;
 
   @include respond(phone) {
@@ -36,14 +36,11 @@
     color: rgba(255, 255, 255, 0.7);
     border: none;
 
-    font-family: "Press Start 2P";
+    font-family: 'Press Start 2P';
     font-size: 3rem;
 
     @include respond(tablet) {
       font-size: 2.4rem;
-    }
-    @include respond(phone) {
-      text-overflow: ellipsis;
     }
   }
 }
@@ -62,7 +59,7 @@
   img {
     max-width: 10rem;
 
-    @include respond (tablet) {
+    @include respond(tablet) {
       width: 50%;
     }
   }
