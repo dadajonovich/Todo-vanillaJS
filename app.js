@@ -10,7 +10,6 @@
   const name = document.querySelector('.footer');
   const inputText = document.querySelector('.input__text');
 
-  renderAllTasks(objOfTasks);
   form.addEventListener('submit', onFormSubmitHandler);
   listContainer.addEventListener('click', onDeleteHandler);
   name.addEventListener('mouseover', renameHandler);
@@ -21,19 +20,22 @@
     } else inputText.placeholder = 'Что делать будем?';
   });
 
-  function renderAllTasks(tasksList) {
-    if (!tasksList) {
-      console.error('Задача не передана!');
-      return;
+  function renderAllTasks(tasks, fn) {
+    try {
+      if (!tasks) {
+        throw new Error('Нет задач!');
+      }
+
+      const fragment = document.createDocumentFragment();
+      Object.values(tasks).forEach((task) => {
+        const li = fn(task);
+        fragment.append(li);
+      });
+
+      listContainer.append(fragment);
+    } catch (error) {
+      console.log(error.message);
     }
-
-    const fragment = document.createDocumentFragment();
-    Object.values(tasksList).forEach((task) => {
-      const li = listItemTemplate(task);
-      fragment.append(li);
-    });
-
-    listContainer.append(fragment);
   }
 
   function listItemTemplate({ _id, body } = {}) {
@@ -61,6 +63,8 @@
 
     return li;
   }
+
+  renderAllTasks(objOfTasks, listItemTemplate);
 
   function onFormSubmitHandler(event) {
     event.preventDefault();
