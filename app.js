@@ -165,17 +165,12 @@
     return newObjWithTask;
   };
 
-  const deleteCycl = compose(
+  const deleteHandler = compose(
     getIdElement,
     delTask,
     changeLocalStorage,
     countListItems
   );
 
-  const onDeleteHandler = (e) => {
-    return deleteCycl(e);
-  };
-  listContainer.addEventListener('click', (e) => {
-    onDeleteHandler(e);
-  });
+  listContainer.addEventListener('click', deleteHandler);
 })();
