@@ -98,7 +98,7 @@
     return newObjWithTask;
   };
 
-  function changeLocalStorage(obj) {
+  const changeLocalStorage = (obj) => {
     try {
       const tasksOnJson = JSON.stringify(obj);
       localStorage.setItem('tasks', tasksOnJson);
@@ -106,7 +106,7 @@
     } catch (error) {
       throw error('Произошла ошибка в changeLocalStorage');
     }
-  }
+  };
 
   const countListItems = (tasks) => {
     const lenghtObj = Object.keys(tasks).length;
