@@ -139,8 +139,6 @@
 
   form.addEventListener('submit', (e) => onFormSubmitHandler(e));
 
-  // Delete
-
   const getIdElement = ({ target }) => {
     try {
       if (!target.classList.contains('list__delete-btn')) throw Error;
