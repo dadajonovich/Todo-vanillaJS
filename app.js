@@ -151,16 +151,20 @@
   };
 
   const delTask = ({ id, parent }) => {
-    const isConfirm = confirm('С глаз долой?');
-    if (!isConfirm) return isConfirm;
-    const newObjWithTask = {
-      ...objOfTasks,
-    };
-    delete newObjWithTask[id];
-    parent.remove();
-    objOfTasks = { ...newObjWithTask };
+    try {
+      const isConfirm = confirm('С глаз долой?');
+      if (!isConfirm) throw Error;
+      const newObjWithTask = {
+        ...objOfTasks,
+      };
+      delete newObjWithTask[id];
+      parent.remove();
+      objOfTasks = { ...newObjWithTask };
 
-    return newObjWithTask;
+      return newObjWithTask;
+    } catch (error) {
+      throw error('Удаление не было подтверждено в delTask');
+    }
   };
 
   const deleteHandler = compose(
