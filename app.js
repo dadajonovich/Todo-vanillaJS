@@ -146,9 +146,6 @@
       if (!target.classList.contains('list__delete-btn')) throw Error;
       const parent = target.closest('[data-task-id]');
       const id = parent.dataset.taskId;
-      console.log(id);
-      // const confirmed = deleteTask(id);
-      // deleteTaskFromHtml(parent, confirmed);
       return { id, parent };
     } catch (error) {
       throw error('Событие не на кнопке удаления!');
@@ -178,5 +175,7 @@
   const onDeleteHandler = (e) => {
     return deleteCycl(e);
   };
-  listContainer.addEventListener('click', (e) => onDeleteHandler(e));
+  listContainer.addEventListener('click', (e) => {
+    onDeleteHandler(e);
+  });
 })();
