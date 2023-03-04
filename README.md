@@ -2,7 +2,8 @@
 ---
 
 This application on vanilla JS was written in order to gain practical collaboration skills in the GitHub repository, together with <a href="https://github.com/KarVarr">Karen Vardanian</a>.  
-The code is written in the style of the imperative paradigm without using frameworks.
+
+When writing the code, I was inspired by <a href=""https://github.com/moonhighway/learning-react>"Learning React: Second Edition"</a>, namely chapter 2, where he talks about functional programming - pure functions, currying, compositions, etc.
 
 ---
 
