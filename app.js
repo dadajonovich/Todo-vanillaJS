@@ -14,7 +14,7 @@
     } else inputText.placeholder = 'Что делать будем?';
   });
 
-  const renderAllTasks = (tasks, fnListItemTemplate) => {
+  const renderAllTasks = (tasks, fnTemplate) => {
     try {
       if (!tasks) {
         throw new Error('Нет задач!');
@@ -22,7 +22,7 @@
 
       const fragment = document.createDocumentFragment();
       Object.values(tasks).forEach((task) => {
-        const li = fnListItemTemplate(task);
+        const li = fnTemplate(task);
         fragment.append(li);
         return true;
       });
@@ -76,18 +76,16 @@
     }
   };
 
-  const createNewTask = (fnListItemTemplate) => (body) => {
+  const createNewTask = (fnTemplate) => (body) => {
     const newTask = {
       body,
       completed: false,
       _id: `task-${Math.random()}`,
     };
-    const listItem = fnListItemTemplate(newTask);
+    const listItem = fnTemplate(newTask);
     listContainer.prepend(listItem);
     return newTask;
   };
-
-  const curryCreateNewTask = createNewTask(listItemTemplate);
 
   const addTaskToObj = (task) => {
     const newObjWithTask = {
@@ -126,7 +124,7 @@
 
   const addingCycle = compose(
     getInput,
-    curryCreateNewTask,
+    createNewTask(listItemTemplate),
     addTaskToObj,
     changeLocalStorage,
     countListItems
