@@ -98,8 +98,7 @@
 
   const changeLocalStorage = (obj) => {
     try {
-      const tasksOnJson = JSON.stringify(obj);
-      localStorage.setItem('tasks', tasksOnJson);
+      localStorage.setItem('tasks', JSON.stringify(obj));
       return obj;
     } catch (error) {
       throw error('Произошла ошибка в changeLocalStorage');
@@ -135,7 +134,7 @@
     return addingCycle(input);
   };
 
-  form.addEventListener('submit', (e) => onFormSubmitHandler(e));
+  form.addEventListener('submit', onFormSubmitHandler);
 
   const getIdElement = ({ target }) => {
     try {
