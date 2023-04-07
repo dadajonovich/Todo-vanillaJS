@@ -1,18 +1,23 @@
-'use strict';
-
 (() => {
   let objOfTasks = JSON.parse(localStorage.getItem('tasks')) || {};
   const listContainer = document.querySelector('.list');
-  const form = document.forms['addTask'];
-  const input = form.elements['taskText'];
+  const form = document.forms.addTask;
+  const input = form.elements.taskText;
   const counter = document.querySelector('.list__counter');
   const inputText = document.querySelector('.input__text');
 
-  window.addEventListener('resize', (e) => {
-    if (document.documentElement.clientWidth < 600) {
+  const mediaQuery = window.matchMedia('(max-width: 640px)');
+
+  const handleMediaChange = (e) => {
+    if (e.matches) {
       inputText.placeholder = '???';
-    } else inputText.placeholder = 'Что делать будем?';
-  });
+    } else {
+      inputText.placeholder = 'Что делать будем?';
+    }
+  };
+
+  mediaQuery.addEventListener('change', handleMediaChange);
+  handleMediaChange(mediaQuery);
 
   const renderAllTasks = (tasks, fnTemplate) => {
     try {
@@ -24,10 +29,9 @@
       Object.values(tasks).forEach((task) => {
         const li = fnTemplate(task);
         fragment.append(li);
-        return true;
       });
-
       listContainer.append(fragment);
+      return true;
     } catch (error) {
       console.log(error.message);
       return error;
@@ -64,7 +68,7 @@
 
   const getInput = (inputFromDom) => {
     try {
-      const value = inputFromDom.value;
+      const { value } = inputFromDom;
       if (!value) {
         throw Error;
       }
@@ -107,7 +111,7 @@
 
   const countListItems = (tasks) => {
     const lenghtObj = Object.keys(tasks).length;
-    if (lenghtObj != 0) {
+    if (lenghtObj !== 0) {
       counter.textContent = `${lenghtObj} items`;
     } else counter.textContent = 'Безделье это игрушка дьявола...';
   };
