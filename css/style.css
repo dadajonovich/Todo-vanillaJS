@@ -122,11 +122,12 @@ h3 {
   border-radius: 10rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
 }
-.input:focus-within {
+
+.input__highlight {
   outline: solid rgb(223, 250, 51);
 }
 @media only screen and (max-width: 37.5em) {
-  .input:focus-within {
+  .input__highlight {
     outline: none;
   }
 }

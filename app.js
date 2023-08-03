@@ -19,6 +19,17 @@
   mediaQuery.addEventListener('change', handleMediaChange);
   handleMediaChange(mediaQuery);
 
+  function handleInputFocus() {
+    if (document.activeElement === input) {
+      form.classList.add('input__highlight');
+    } else {
+      form.classList.remove('input__highlight');
+    }
+  }
+
+  input.onfocus = handleInputFocus;
+  input.onblur = handleInputFocus;
+
   const renderAllTasks = (tasks, fnTemplate) => {
     try {
       if (!tasks) {
@@ -77,6 +88,7 @@
     } catch (error) {
       Swal.fire('Нет дел - нет проблем!');
       throw error('Пустой input - код остановлен!');
+      input.focus();
     }
   };
 
@@ -93,8 +105,8 @@
 
   const addTaskToObj = (task) => {
     const newObjWithTask = {
-      ...objOfTasks,
       [task._id]: task,
+      ...objOfTasks,
     };
     objOfTasks = { ...newObjWithTask };
     return newObjWithTask;

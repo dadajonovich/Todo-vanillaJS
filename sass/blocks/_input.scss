@@ -9,12 +9,12 @@
 
   border-radius: 10rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.391);
-  &:focus-within {
-    outline: solid rgb(223, 250, 51);
+}
+.input__highlight {
+  outline: solid rgb(223, 250, 51);
 
-    @include respond(phone) {
-      outline: none;
-    }
+  @include respond(phone) {
+    outline: none;
   }
 }
 .input__text {
