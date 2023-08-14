@@ -1,13 +1,3 @@
-// import { createStore } from 'redux';
-
-// const todo = (state = {}, action) => {};
-
-// const store = createStore(todo);
-
-// const addTodo = () => ({
-//   type: "ADD_TODO",
-// })
-
 let objOfTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 const listContainer = document.querySelector('.list');
 const form = document.forms.addTask;
