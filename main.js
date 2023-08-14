@@ -174,10 +174,6 @@ const delTask = ({ id, parent }) => {
     const isConfirm = confirm('С глаз долой?');
     if (!isConfirm) throw Error;
     const newObjWithTask = objOfTasks.filter((obj) => obj._id !== id);
-    // const newObjWithTask = {
-    //   ...objOfTasks,
-    // };
-    // delete newObjWithTask[id];
     parent.remove();
     objOfTasks = [...newObjWithTask];
 
