@@ -11,7 +11,7 @@ When writing the code, I was inspired by <a href="https://github.com/moonhighway
 
 ---
 
-<img src="img/image.png" alt="image" width="900" />
+<img src="./assets/img/image.png" alt="image" width="900" />
 </div>
 
 
