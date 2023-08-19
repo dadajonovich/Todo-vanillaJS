@@ -1,12 +1,12 @@
 /* font */
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 // import
-@import "blocks/mixin";
-@import "reset";
-@import "blocks/title";
-@import "blocks/input";
-@import "blocks/list";
+@import 'blocks/mixin';
+@import 'reset';
+@import 'blocks/title';
+@import 'blocks/input';
+@import 'blocks/list';
 
 // blocks
 .container {
@@ -43,14 +43,11 @@
   min-height: 100%;
   margin: 1rem;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
+  background: rgba(255, 255, 255, 0.25);
   /* Hide scrollbar  */
+
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   @include respond(land) {

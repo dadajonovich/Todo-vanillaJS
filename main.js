@@ -18,16 +18,40 @@ const handleMediaChange = (e) => {
 mediaQuery.addEventListener('change', handleMediaChange);
 handleMediaChange(mediaQuery);
 
-function handleInputFocus() {
+const handleInputFocus = () => {
   if (document.activeElement === input) {
     form.classList.add('input__highlight');
   } else {
     form.classList.remove('input__highlight');
   }
-}
+};
 
 input.onfocus = handleInputFocus;
 input.onblur = handleInputFocus;
+
+const handleDragStart = (event) => {
+  event.target.classList.add('list__item-dragging');
+};
+
+const handleDragEnd = (event) => {
+  event.target.classList.remove('list__item-dragging');
+};
+
+const initSortableList = (e) => {
+  e.preventDefault();
+  const draggingItem = listContainer.querySelector('.list__item-dragging');
+  const siblings = [
+    ...listContainer.querySelectorAll('.list__item:not(.list__item-dragging'),
+  ];
+  let nextSibling = siblings.find((sibling) => {
+    return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
+  });
+  console.log(nextSibling);
+  listContainer.insertBefore(draggingItem, nextSibling);
+};
+
+listContainer.addEventListener('dragover', initSortableList);
+listContainer.addEventListener('dragenter', (e) => e.preventDefault());
 
 const renderAllTasks = (tasks, fnTemplate) => {
   try {
@@ -38,6 +62,8 @@ const renderAllTasks = (tasks, fnTemplate) => {
     const fragment = document.createDocumentFragment();
     Object.values(tasks).forEach((task) => {
       const li = fnTemplate(task);
+      li.addEventListener('dragstart', (e) => handleDragStart(e));
+      li.addEventListener('dragend', (e) => handleDragEnd(e));
       fragment.append(li);
     });
     listContainer.append(fragment);
@@ -52,6 +78,7 @@ const listItemTemplate = ({ _id, body } = {}) => {
   const li = document.createElement('li');
   li.classList.add('list__item');
   li.setAttribute('data-task-id', _id);
+  li.setAttribute('draggable', true);
 
   const wrapper = document.createElement('div');
   wrapper.classList.add('list__task');
@@ -66,10 +93,7 @@ const listItemTemplate = ({ _id, body } = {}) => {
 
   wrapper.append(article, deleteBtn);
 
-  const vl = document.createElement('div');
-  vl.classList.add('list__vl');
-
-  li.append(wrapper, vl);
+  li.append(wrapper);
 
   return li;
 };
@@ -98,6 +122,8 @@ const createNewTask = (fnTemplate) => (body) => {
     _id: `task-${Math.random()}`,
   };
   const listItem = fnTemplate(newTask);
+  listItem.addEventListener('dragstart', (e) => handleDragStart(e));
+  listItem.addEventListener('dragend', (e) => handleDragEnd(e));
   listContainer.prepend(listItem);
   return newTask;
 };

@@ -1,11 +1,18 @@
 .list {
   margin-top: 3rem;
 
-  border-radius: 1rem;
+  // border: 1rem dashed;
+  // border-radius: 1rem;
+  // &:empty {
+  //   border: none;
+  // }
 
-  backdrop-filter: invert(100%);
-  &__item:last-child .list__vl {
-    visibility: hidden;
+  &__item {
+    border: 1rem dashed;
+    margin-bottom: 2rem;
+    &-dragging {
+      border-color: purple;
+    }
   }
   &__task {
     display: flex;
@@ -17,7 +24,7 @@
   &__text {
     color: rgb(212, 208, 208);
 
-    font-family: "Press Start 2P";
+    font-family: 'Press Start 2P';
     font-size: 3rem;
   }
   &__delete-btn {
@@ -48,7 +55,7 @@
 
       text-align: right;
 
-      font-family: "Press Start 2P", cursive;
+      font-family: 'Press Start 2P', cursive;
       font-size: 2rem;
     }
   }
