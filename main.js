@@ -37,21 +37,39 @@ const handleDragEnd = (event) => {
   event.target.classList.remove('list__item-dragging');
 };
 
-const initSortableList = (e) => {
+const initDrag = (e) => {
   e.preventDefault();
   const draggingItem = listContainer.querySelector('.list__item-dragging');
-  const siblings = [
-    ...listContainer.querySelectorAll('.list__item:not(.list__item-dragging'),
-  ];
-  let nextSibling = siblings.find((sibling) => {
-    return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
-  });
-  console.log(nextSibling);
-  listContainer.insertBefore(draggingItem, nextSibling);
+  const currentElement = e.target;
+
+  const isMoveable =
+    draggingItem !== currentElement &&
+    currentElement.classList.contains('list__item');
+
+  if (!isMoveable) return;
+
+  const nextElement =
+    currentElement === draggingItem.nextElementSibling
+      ? currentElement.nextElementSibling
+      : currentElement;
+
+  listContainer.insertBefore(draggingItem, nextElement);
 };
 
-listContainer.addEventListener('dragover', initSortableList);
-listContainer.addEventListener('dragenter', (e) => e.preventDefault());
+const initSortableList = () => {
+  const updatedTasks = [];
+  const listItems = listContainer.querySelectorAll('.list__item');
+  listItems.forEach((item) => {
+    const taskId = item.getAttribute('data-task-id');
+    const task = objOfTasks.find((obj) => obj._id === taskId);
+    updatedTasks.push(task);
+  });
+  objOfTasks = [...updatedTasks];
+  changeLocalStorage(objOfTasks);
+};
+
+listContainer.addEventListener('dragover', initDrag);
+listContainer.addEventListener('dragend', initSortableList);
 
 const renderAllTasks = (tasks, fnTemplate) => {
   try {
