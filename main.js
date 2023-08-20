@@ -5,6 +5,7 @@ const input = form.elements.taskText;
 const counter = document.querySelector('.list__counter');
 const inputText = document.querySelector('.input__text');
 
+// Match media
 const mediaQuery = window.matchMedia('(max-width: 640px)');
 
 const handleMediaChange = (e) => {
@@ -16,8 +17,9 @@ const handleMediaChange = (e) => {
 };
 
 mediaQuery.addEventListener('change', handleMediaChange);
-handleMediaChange(mediaQuery);
+// handleMediaChange(mediaQuery);
 
+// Focus
 const handleInputFocus = () => {
   if (document.activeElement === input) {
     form.classList.add('input__highlight');
@@ -26,9 +28,10 @@ const handleInputFocus = () => {
   }
 };
 
-input.onfocus = handleInputFocus;
-input.onblur = handleInputFocus;
+input.addEventListener('focus', handleInputFocus);
+input.addEventListener('blur', handleInputFocus);
 
+// Drag and drop
 const handleDragStart = (event) => {
   event.target.classList.add('list__item-dragging');
 };
@@ -71,6 +74,7 @@ const initSortableList = () => {
 listContainer.addEventListener('dragover', initDrag);
 listContainer.addEventListener('dragend', initSortableList);
 
+// Todo
 const renderAllTasks = (tasks, fnTemplate) => {
   try {
     if (!tasks) {
@@ -129,7 +133,6 @@ const getInput = (inputFromDom) => {
   } catch (error) {
     Swal.fire('Нет дел - нет проблем!');
     throw error('Пустой input - код остановлен!');
-    input.focus();
   }
 };
 

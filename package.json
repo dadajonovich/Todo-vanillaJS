@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "csslint": "csscomb assets/sass"
+    "csslint": "csscomb src/assets/sass"
   },
   "devDependencies": {
     "csscomb": "^4.3.0",

@@ -8,8 +8,9 @@
   // }
 
   &__item {
-    border: 1rem dashed;
     margin-bottom: 2rem;
+
+    border: 1rem dashed;
     &-dragging {
       border-color: purple;
     }
