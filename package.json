@@ -10,13 +10,15 @@
     "csslint": "csscomb src/assets/sass"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "csscomb": "^4.3.0",
     "eslint": "^8.37.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.0.2",
     "sass": "^1.66.1",
-    "vite": "^4.4.5"
+    "typescript": "^5.3.2",
+    "vite": "^4.4.5",
+    "vite-plugin-minify": "^1.5.2"
   }
 }
