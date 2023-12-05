@@ -10,7 +10,7 @@ interface Todo {
     ? JSON.parse(localStorageTasks)
     : [];
   const listContainer = document.querySelector('.list') as HTMLUListElement;
-  const form = document.forms.namedItem('addTask')!;
+  const form = document.forms.namedItem('addTask') as HTMLFormElement;
   const input = form.elements.namedItem('taskText') as HTMLInputElement;
   const counter = document.querySelector('.list__counter') as HTMLElement;
   const inputText = document.querySelector('.input__text') as HTMLInputElement;
@@ -28,7 +28,6 @@ interface Todo {
   mediaQuery.addEventListener('change', handleMediaChange);
   // handleMediaChange(mediaQuery);
 
-  // Focus
   const handleInputFocus = () => {
     if (document.activeElement === input) {
       form.classList.add('input__highlight');
@@ -40,7 +39,6 @@ interface Todo {
   input.addEventListener('focus', handleInputFocus);
   input.addEventListener('blur', handleInputFocus);
 
-  // Drag and drop
   const handleDragStart = (event: DragEvent) => {
     if (event.target instanceof HTMLElement) {
       event.target.classList.add('list__item-dragging');
@@ -91,9 +89,8 @@ interface Todo {
   listContainer.addEventListener('dragover', initDrag);
   listContainer.addEventListener('dragend', initSortableList);
 
-  // Todo
   const renderAllTasks = (
-    tasks: Todo[],
+    tasks: readonly Todo[],
     fnTemplate: (todo: Todo) => HTMLLIElement,
   ) => {
     try {
@@ -153,6 +150,7 @@ interface Todo {
     } catch (error) {
       confirm('Нет дел - нет проблем!');
       console.log(error);
+      throw error;
     }
   };
 

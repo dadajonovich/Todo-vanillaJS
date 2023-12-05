@@ -15,4 +15,3 @@ Implemented the ability to Drag'n'drop and save tasks in localStorage
 ---
 
 <img src="./src/assets/img/image.png" alt="image" width="900" />
-</div>
